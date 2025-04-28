@@ -58,6 +58,7 @@
             btnCriarConta.TabIndex = 2;
             btnCriarConta.Text = "Criar Conta";
             btnCriarConta.UseVisualStyleBackColor = true;
+            btnCriarConta.Click += btnCriarConta_Click;
             // 
             // lblCriarConta
             // 

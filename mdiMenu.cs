@@ -66,6 +66,7 @@ namespace ProjetoIntegradorME
         {
         }
 
+        /*
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toolStrip.Visible = toolBarToolStripMenuItem.Checked;
@@ -75,6 +76,8 @@ namespace ProjetoIntegradorME
         {
             statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
+
+        */
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,6 +107,49 @@ namespace ProjetoIntegradorME
             }
         }
 
-      
+
+
+
+
+
+
+
+
+        private void toolStripSair_Click(object sender, EventArgs e)
+        {
+            //sair
+
+            DialogResult sair = MessageBox.Show("Deseja sair?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (sair == DialogResult.Yes)
+            {
+                this.Close();
+                this.Dispose();
+            }
+        }
+
+        private void toolStripLidos_Click(object sender, EventArgs e)
+        {
+            //abrir o formulário de lidos
+
+            frmLidos formsLidos = new frmLidos();
+            formsLidos.ShowDialog();
+        }
+
+        private void toolStripLendo_Click(object sender, EventArgs e)
+        {
+            //abrir o formulário lendo
+
+            frmLendo fromsLendo = new frmLendo();
+            fromsLendo.ShowDialog();
+        }
+
+        private void toolStripProxLeituras_Click(object sender, EventArgs e)
+        {
+            //abrir o formulário das próximas leituras
+
+            frmProxLeituras formsProxLtras = new frmProxLeituras();
+            formsProxLtras.ShowDialog();
+            
+        }
     }
 }

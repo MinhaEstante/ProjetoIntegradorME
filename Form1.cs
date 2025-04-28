@@ -7,6 +7,13 @@ namespace ProjetoIntegradorME
             InitializeComponent();
         }
 
-       
+        private void btnCriarConta_Click(object sender, EventArgs e)
+        {
+            //abrir formulário cadastro-criar conta
+
+            frmCadastro frmNovaConta = new frmCadastro();
+            frmNovaConta.ShowDialog();
+
+        }
     }
 }
