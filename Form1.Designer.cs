@@ -82,6 +82,7 @@
             // 
             txtSenha.Location = new Point(211, 194);
             txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(100, 23);
             txtSenha.TabIndex = 5;
             // 
@@ -115,6 +116,7 @@
             btnEntrar.TabIndex = 8;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // frmLogin
             // 

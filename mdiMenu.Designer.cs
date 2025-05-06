@@ -78,24 +78,25 @@
             // 
             // toolStrip
             // 
+            toolStrip.AutoSize = false;
             toolStrip.BackColor = Color.FromArgb(100, 63, 49);
             toolStrip.Dock = DockStyle.Left;
             toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2, toolStripUsuario, toolStripLendo, toolStripLidos, toolStripProxLeituras, toolStripSair });
             toolStrip.Location = new Point(0, 24);
             toolStrip.Name = "toolStrip";
-            toolStrip.Size = new Size(32, 499);
+            toolStrip.Size = new Size(64, 499);
             toolStrip.TabIndex = 1;
             toolStrip.Text = "ToolStrip";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(29, 6);
+            toolStripSeparator1.Size = new Size(62, 6);
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(29, 6);
+            toolStripSeparator2.Size = new Size(62, 6);
             // 
             // toolStripUsuario
             // 
@@ -103,7 +104,7 @@
             toolStripUsuario.Image = (Image)resources.GetObject("toolStripUsuario.Image");
             toolStripUsuario.ImageTransparentColor = Color.Magenta;
             toolStripUsuario.Name = "toolStripUsuario";
-            toolStripUsuario.Size = new Size(29, 20);
+            toolStripUsuario.Size = new Size(62, 20);
             toolStripUsuario.Text = "toolStripButton1";
             // 
             // toolStripLendo
@@ -112,7 +113,7 @@
             toolStripLendo.Image = (Image)resources.GetObject("toolStripLendo.Image");
             toolStripLendo.ImageTransparentColor = Color.Magenta;
             toolStripLendo.Name = "toolStripLendo";
-            toolStripLendo.Size = new Size(29, 20);
+            toolStripLendo.Size = new Size(62, 20);
             toolStripLendo.Text = "toolStripButton1";
             toolStripLendo.Click += toolStripLendo_Click;
             // 
@@ -122,7 +123,7 @@
             toolStripLidos.Image = (Image)resources.GetObject("toolStripLidos.Image");
             toolStripLidos.ImageTransparentColor = Color.Magenta;
             toolStripLidos.Name = "toolStripLidos";
-            toolStripLidos.Size = new Size(29, 20);
+            toolStripLidos.Size = new Size(62, 20);
             toolStripLidos.Text = "toolStripButton1";
             toolStripLidos.Click += toolStripLidos_Click;
             // 
@@ -132,7 +133,7 @@
             toolStripProxLeituras.Image = (Image)resources.GetObject("toolStripProxLeituras.Image");
             toolStripProxLeituras.ImageTransparentColor = Color.Magenta;
             toolStripProxLeituras.Name = "toolStripProxLeituras";
-            toolStripProxLeituras.Size = new Size(29, 20);
+            toolStripProxLeituras.Size = new Size(62, 20);
             toolStripProxLeituras.Text = "toolStripButton1";
             toolStripProxLeituras.Click += toolStripProxLeituras_Click;
             // 
@@ -143,16 +144,16 @@
             toolStripSair.Image = (Image)resources.GetObject("toolStripSair.Image");
             toolStripSair.ImageTransparentColor = Color.Magenta;
             toolStripSair.Name = "toolStripSair";
-            toolStripSair.Size = new Size(29, 20);
+            toolStripSair.Size = new Size(62, 20);
             toolStripSair.Text = "toolStripButton2";
             toolStripSair.Click += toolStripSair_Click;
             // 
             // statusStrip
             // 
-            statusStrip.Location = new Point(32, 501);
+            statusStrip.Location = new Point(64, 501);
             statusStrip.Name = "statusStrip";
             statusStrip.Padding = new Padding(1, 0, 16, 0);
-            statusStrip.Size = new Size(705, 22);
+            statusStrip.Size = new Size(673, 22);
             statusStrip.TabIndex = 2;
             statusStrip.Text = "StatusStrip";
             // 
@@ -171,9 +172,9 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(txtBuscar);
-            panel1.Location = new Point(24, 24);
+            panel1.Location = new Point(67, 24);
             panel1.Name = "panel1";
-            panel1.Size = new Size(713, 474);
+            panel1.Size = new Size(670, 474);
             panel1.TabIndex = 4;
             // 
             // pictureBox8

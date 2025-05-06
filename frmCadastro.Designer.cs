@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
             pcbMiniEstante = new PictureBox();
-            txtUsuário = new TextBox();
+            txtUsuario = new TextBox();
             txtEmail = new TextBox();
             txtSenha = new TextBox();
             btnCadastrar = new Button();
@@ -50,12 +50,12 @@
             pcbMiniEstante.TabIndex = 0;
             pcbMiniEstante.TabStop = false;
             // 
-            // txtUsuário
+            // txtUsuario
             // 
-            txtUsuário.Location = new Point(103, 122);
-            txtUsuário.Name = "txtUsuário";
-            txtUsuário.Size = new Size(100, 23);
-            txtUsuário.TabIndex = 1;
+            txtUsuario.Location = new Point(103, 122);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(100, 23);
+            txtUsuario.TabIndex = 1;
             // 
             // txtEmail
             // 
@@ -79,6 +79,7 @@
             btnCadastrar.TabIndex = 4;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // lblUsuario
             // 
@@ -125,7 +126,7 @@
             Controls.Add(btnCadastrar);
             Controls.Add(txtSenha);
             Controls.Add(txtEmail);
-            Controls.Add(txtUsuário);
+            Controls.Add(txtUsuario);
             Controls.Add(pcbMiniEstante);
             Name = "frmCadastro";
             StartPosition = FormStartPosition.CenterScreen;
@@ -138,7 +139,7 @@
         #endregion
 
         private PictureBox pcbMiniEstante;
-        private TextBox txtUsuário;
+        private TextBox txtUsuario;
         private TextBox txtEmail;
         private TextBox txtSenha;
         private Button btnCadastrar;
