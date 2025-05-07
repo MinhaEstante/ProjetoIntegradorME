@@ -53,9 +53,15 @@ namespace ProjetoIntegradorME
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text.Trim() == "" || txtSenha.Text.Trim().Length < 6)
+
+            if (txtSenha.Text.Trim().Length < 6)
             {
-                MessageBox.Show("Usuario ou Senha incorretos!");
+                MessageBox.Show("A senha deve ter no mínimo 6 caracteres!");
+                txtSenha.Focus();
+            }
+            else if (txtUsuario.Text.Trim() == "" || txtEmail.Text.Trim() == "" || !txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Usuario ou Email inválidos!");
                 txtUsuario.Focus();
             }
             else

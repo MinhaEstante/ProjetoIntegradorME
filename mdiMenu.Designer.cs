@@ -39,6 +39,7 @@
             toolStripLidos = new ToolStripButton();
             toolStripProxLeituras = new ToolStripButton();
             toolStripSair = new ToolStripButton();
+            toolStripSobre = new ToolStripButton();
             statusStrip = new StatusStrip();
             toolTip = new ToolTip(components);
             panel1 = new Panel();
@@ -81,7 +82,7 @@
             toolStrip.AutoSize = false;
             toolStrip.BackColor = Color.FromArgb(100, 63, 49);
             toolStrip.Dock = DockStyle.Left;
-            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2, toolStripUsuario, toolStripLendo, toolStripLidos, toolStripProxLeituras, toolStripSair });
+            toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2, toolStripUsuario, toolStripLendo, toolStripLidos, toolStripProxLeituras, toolStripSair, toolStripSobre });
             toolStrip.Location = new Point(0, 24);
             toolStrip.Name = "toolStrip";
             toolStrip.Size = new Size(64, 499);
@@ -106,6 +107,7 @@
             toolStripUsuario.Name = "toolStripUsuario";
             toolStripUsuario.Size = new Size(62, 20);
             toolStripUsuario.Text = "toolStripButton1";
+            toolStripUsuario.Click += toolStripUsuario_Click;
             // 
             // toolStripLendo
             // 
@@ -147,6 +149,17 @@
             toolStripSair.Size = new Size(62, 20);
             toolStripSair.Text = "toolStripButton2";
             toolStripSair.Click += toolStripSair_Click;
+            // 
+            // toolStripSobre
+            // 
+            toolStripSobre.Alignment = ToolStripItemAlignment.Right;
+            toolStripSobre.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripSobre.Image = (Image)resources.GetObject("toolStripSobre.Image");
+            toolStripSobre.ImageTransparentColor = Color.Magenta;
+            toolStripSobre.Name = "toolStripSobre";
+            toolStripSobre.Size = new Size(62, 20);
+            toolStripSobre.Text = "toolStripButton1";
+            toolStripSobre.Click += toolStripSobre_Click;
             // 
             // statusStrip
             // 
@@ -259,7 +272,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(310, 3);
+            pictureBox1.Location = new Point(286, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
             pictureBox1.TabIndex = 8;
@@ -267,7 +280,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(623, 3);
+            btnBuscar.Location = new Point(576, 4);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 7;
@@ -276,7 +289,7 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(463, 3);
+            txtBuscar.Location = new Point(416, 4);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(154, 23);
             txtBuscar.TabIndex = 6;
@@ -340,6 +353,7 @@
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox8;
+        private ToolStripButton toolStripSobre;
     }
 }
 

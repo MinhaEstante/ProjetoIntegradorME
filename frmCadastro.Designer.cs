@@ -37,6 +37,7 @@
             lblUsuario = new Label();
             lblEmail = new Label();
             lblSenha = new Label();
+            lblDescSenha = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbMiniEstante).BeginInit();
             SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(116, 279);
+            btnCadastrar.Location = new Point(115, 302);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
             btnCadastrar.TabIndex = 4;
@@ -114,12 +115,24 @@
             lblSenha.Text = "Senha";
             lblSenha.TextAlign = ContentAlignment.BottomCenter;
             // 
+            // lblDescSenha
+            // 
+            lblDescSenha.BackColor = Color.AntiqueWhite;
+            lblDescSenha.Font = new Font("Segoe UI", 8F);
+            lblDescSenha.ForeColor = Color.FromArgb(192, 0, 0);
+            lblDescSenha.Location = new Point(80, 257);
+            lblDescSenha.Name = "lblDescSenha";
+            lblDescSenha.Size = new Size(154, 27);
+            lblDescSenha.TabIndex = 8;
+            lblDescSenha.Text = "A senha deve ter no mínimo              6 caracteres.";
+            // 
             // frmCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
             ClientSize = new Size(315, 347);
+            Controls.Add(lblDescSenha);
             Controls.Add(lblSenha);
             Controls.Add(lblEmail);
             Controls.Add(lblUsuario);
@@ -146,5 +159,6 @@
         private Label lblUsuario;
         private Label lblEmail;
         private Label lblSenha;
+        private Label lblDescSenha;
     }
 }

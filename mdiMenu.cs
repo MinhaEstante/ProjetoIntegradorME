@@ -149,7 +149,21 @@ namespace ProjetoIntegradorME
 
             frmProxLeituras formsProxLtras = new frmProxLeituras();
             formsProxLtras.ShowDialog();
-            
+
+        }
+
+        private void toolStripUsuario_Click(object sender, EventArgs e)
+        {
+            //abrir o formulário perfil do usuário
+
+            frmUsuario formsUsuario = new frmUsuario();
+            formsUsuario.ShowDialog();
+
+        }
+
+        private void toolStripSobre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
