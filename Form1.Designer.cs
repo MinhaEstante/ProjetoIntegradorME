@@ -88,7 +88,7 @@
             // 
             // lblEmail
             // 
-            lblEmail.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblEmail.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblEmail.ForeColor = Color.FromArgb(255, 128, 0);
             lblEmail.Location = new Point(211, 118);
             lblEmail.Name = "lblEmail";
@@ -99,7 +99,7 @@
             // 
             // lblSenha
             // 
-            lblSenha.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblSenha.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblSenha.ForeColor = Color.FromArgb(255, 128, 0);
             lblSenha.Location = new Point(211, 176);
             lblSenha.Name = "lblSenha";
@@ -135,6 +135,7 @@
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pcbMinhaEstante).EndInit();
             ResumeLayout(false);
             PerformLayout();

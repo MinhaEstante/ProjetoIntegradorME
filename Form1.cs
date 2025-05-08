@@ -53,6 +53,13 @@ namespace ProjetoIntegradorME
                 txtEmail.Focus();
             }
 
+            Banco.Desconectar();
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

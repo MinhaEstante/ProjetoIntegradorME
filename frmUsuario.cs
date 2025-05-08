@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace ProjetoIntegradorME
 {
@@ -26,43 +28,53 @@ namespace ProjetoIntegradorME
             this.Dispose();
         }
 
-        //private void listarUsuarios()
-        //{
-        //    try
-        //    {
-        //        Banco.Conectar();
-        //        string selecionarUsuarios = "SELECT Usuario, Email FROM Usuarios WHERE Usuario = @usuario AND Email = @email";
-        //        MySqlCommand cmd = new MySqlCommand(selecionarUsuarios, Banco.conexao);
-
-        //        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-        //        DataTable dt = new DataTable();
-        //        da.Fill(dt);
-
-
-        //        txtNomeUsuario.Text = "@usuario";
-        //        txtEmailUsuario.Text = "@email";
-
-
-        //    }
-        //    catch (Exception erro)
-        //    {
-        //        MessageBox.Show(erro.ToString());
-        //    }
-        //}
-
-
-
-
-
-        private void btnDeletar_Click(object sender, EventArgs e)
+        private void dadosUsuario(string usuario)
         {
-            //deletarUsuario();
+            try
+            {
+
+                string xUser = usuario;
+
+                Banco.Conectar();
+                string selecionarUsuarios = "SELECT Nome, Email FROM Usuarios WHERE Nome = @usuario;";
+                MySqlCommand cmd = new MySqlCommand(selecionarUsuarios, Banco.conexao);
+                cmd.Parameters.AddWithValue("@usuario", xUser);
+
+                MySqlDataReader dr =  cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txtEmailUsuario.Text = dr["Email"].ToString();
+                    txtNomeUsuario.Text = dr["Nome"].ToString();
+
+                }
+
+
+                Banco.Desconectar();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.ToString());
+            }
+
         }
+
+
+
+
+
+     
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             frmAlterarUsuario formsAlterar = new frmAlterarUsuario();
             formsAlterar.ShowDialog();
+        }
+
+        private void frmUsuario_Load(object sender, EventArgs e)
+        {
+            dadosUsuario("teste");
         }
 
         //private void deletarUsuario()
@@ -82,7 +94,8 @@ namespace ProjetoIntegradorME
         //            MessageBox.Show("Usuário excluído!");
 
         //            (vai fechar tudo)
-
+        //            
+        //            Banco.Desconectar();
         //        }
 
         //    }

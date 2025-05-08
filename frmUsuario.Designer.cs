@@ -33,12 +33,11 @@
             lblPerfil = new Label();
             picboxFotoUsuario = new PictureBox();
             btnAlterar = new Button();
-            btnDeletar = new Button();
             txtNomeUsuario = new TextBox();
             txtEmailUsuario = new TextBox();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            lblUsuario = new Label();
+            lblEmail = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picboxFotoUsuario).BeginInit();
             SuspendLayout();
@@ -77,15 +76,15 @@
             // 
             // picboxFotoUsuario
             // 
-            picboxFotoUsuario.Location = new Point(100, 48);
+            picboxFotoUsuario.Location = new Point(100, 55);
             picboxFotoUsuario.Name = "picboxFotoUsuario";
-            picboxFotoUsuario.Size = new Size(100, 97);
+            picboxFotoUsuario.Size = new Size(107, 107);
             picboxFotoUsuario.TabIndex = 4;
             picboxFotoUsuario.TabStop = false;
             // 
             // btnAlterar
             // 
-            btnAlterar.Location = new Point(-1, 93);
+            btnAlterar.Location = new Point(12, 32);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(75, 23);
             btnAlterar.TabIndex = 5;
@@ -93,64 +92,56 @@
             btnAlterar.UseVisualStyleBackColor = true;
             btnAlterar.Click += btnAlterar_Click;
             // 
-            // btnDeletar
-            // 
-            btnDeletar.Location = new Point(-1, 122);
-            btnDeletar.Name = "btnDeletar";
-            btnDeletar.Size = new Size(75, 23);
-            btnDeletar.TabIndex = 6;
-            btnDeletar.Text = "Deletar";
-            btnDeletar.UseVisualStyleBackColor = true;
-            btnDeletar.Click += btnDeletar_Click;
-            // 
             // txtNomeUsuario
             // 
             txtNomeUsuario.Enabled = false;
-            txtNomeUsuario.Location = new Point(100, 151);
+            txtNomeUsuario.Location = new Point(100, 192);
             txtNomeUsuario.Name = "txtNomeUsuario";
             txtNomeUsuario.Size = new Size(100, 23);
             txtNomeUsuario.TabIndex = 7;
+            txtNomeUsuario.TextAlign = HorizontalAlignment.Center;
             // 
             // txtEmailUsuario
             // 
             txtEmailUsuario.Enabled = false;
-            txtEmailUsuario.Location = new Point(66, 231);
+            txtEmailUsuario.Location = new Point(66, 255);
             txtEmailUsuario.Name = "txtEmailUsuario";
             txtEmailUsuario.Size = new Size(169, 23);
             txtEmailUsuario.TabIndex = 8;
+            txtEmailUsuario.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(255, 128, 128);
-            label1.Location = new Point(206, 48);
+            label1.Location = new Point(213, 65);
             label1.Name = "label1";
             label1.Size = new Size(88, 15);
             label1.TabIndex = 9;
             label1.Text = "foto do usuario";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label2
+            // lblUsuario
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 128, 128);
-            label2.Location = new Point(28, 177);
-            label2.Name = "label2";
-            label2.Size = new Size(255, 15);
-            label2.TabIndex = 10;
-            label2.Text = "nome do usuario (desativado mas aparecendo)";
-            label2.TextAlign = ContentAlignment.TopCenter;
+            lblUsuario.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblUsuario.ForeColor = Color.FromArgb(255, 128, 0);
+            lblUsuario.Location = new Point(66, 174);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(169, 15);
+            lblUsuario.TabIndex = 12;
+            lblUsuario.Text = "Nome do Usuário";
+            lblUsuario.TextAlign = ContentAlignment.BottomCenter;
             // 
-            // label3
+            // lblEmail
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(255, 128, 128);
-            label3.Location = new Point(30, 257);
-            label3.Name = "label3";
-            label3.Size = new Size(253, 15);
-            label3.TabIndex = 11;
-            label3.Text = "email do usuario (desativado mas aparecendo)";
-            label3.TextAlign = ContentAlignment.TopCenter;
+            lblEmail.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblEmail.ForeColor = Color.FromArgb(255, 128, 0);
+            lblEmail.Location = new Point(66, 237);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(169, 15);
+            lblEmail.TabIndex = 13;
+            lblEmail.Text = "Email";
+            lblEmail.TextAlign = ContentAlignment.BottomCenter;
             // 
             // frmUsuario
             // 
@@ -158,12 +149,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
             ClientSize = new Size(306, 353);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lblEmail);
+            Controls.Add(lblUsuario);
             Controls.Add(label1);
             Controls.Add(txtEmailUsuario);
             Controls.Add(txtNomeUsuario);
-            Controls.Add(btnDeletar);
             Controls.Add(btnAlterar);
             Controls.Add(picboxFotoUsuario);
             Controls.Add(lblPerfil);
@@ -172,6 +162,7 @@
             Name = "frmUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Usuário";
+            Load += frmUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picboxFotoUsuario).EndInit();
             ResumeLayout(false);
@@ -185,11 +176,10 @@
         private Label lblPerfil;
         private PictureBox picboxFotoUsuario;
         private Button btnAlterar;
-        private Button btnDeletar;
         private TextBox txtNomeUsuario;
         private TextBox txtEmailUsuario;
         private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label lblUsuario;
+        private Label lblEmail;
     }
 }

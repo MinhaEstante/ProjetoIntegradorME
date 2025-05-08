@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiMenu));
-            menuStrip = new MenuStrip();
             toolStrip = new ToolStrip();
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripSeparator2 = new ToolStripSeparator();
@@ -55,6 +54,7 @@
             pictureBox1 = new PictureBox();
             btnBuscar = new Button();
             txtBuscar = new TextBox();
+            label1 = new Label();
             toolStrip.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -67,25 +67,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // menuStrip
-            // 
-            menuStrip.BackColor = Color.FromArgb(100, 63, 49);
-            menuStrip.Location = new Point(0, 0);
-            menuStrip.Name = "menuStrip";
-            menuStrip.Padding = new Padding(7, 2, 0, 2);
-            menuStrip.Size = new Size(737, 24);
-            menuStrip.TabIndex = 0;
-            menuStrip.Text = "MenuStrip";
-            // 
             // toolStrip
             // 
             toolStrip.AutoSize = false;
             toolStrip.BackColor = Color.FromArgb(100, 63, 49);
             toolStrip.Dock = DockStyle.Left;
             toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2, toolStripUsuario, toolStripLendo, toolStripLidos, toolStripProxLeituras, toolStripSair, toolStripSobre });
-            toolStrip.Location = new Point(0, 24);
+            toolStrip.Location = new Point(0, 0);
             toolStrip.Name = "toolStrip";
-            toolStrip.Size = new Size(64, 499);
+            toolStrip.Size = new Size(64, 523);
             toolStrip.TabIndex = 1;
             toolStrip.Text = "ToolStrip";
             // 
@@ -185,9 +175,9 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(txtBuscar);
-            panel1.Location = new Point(67, 24);
+            panel1.Location = new Point(64, 26);
             panel1.Name = "panel1";
-            panel1.Size = new Size(670, 474);
+            panel1.Size = new Size(673, 472);
             panel1.TabIndex = 4;
             // 
             // pictureBox8
@@ -294,18 +284,25 @@
             txtBuscar.Size = new Size(154, 23);
             txtBuscar.TabIndex = 6;
             // 
+            // label1
+            // 
+            label1.BackColor = Color.FromArgb(100, 63, 49);
+            label1.Location = new Point(64, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(683, 27);
+            label1.TabIndex = 6;
+            // 
             // mdiMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 64, 0);
             ClientSize = new Size(737, 523);
+            Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(statusStrip);
             Controls.Add(toolStrip);
-            Controls.Add(menuStrip);
             IsMdiContainer = true;
-            MainMenuStrip = menuStrip;
             Margin = new Padding(4, 3, 4, 3);
             Name = "mdiMenu";
             StartPosition = FormStartPosition.CenterScreen;
@@ -326,10 +323,8 @@
             PerformLayout();
 
         }
+
         #endregion
-
-
-        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -354,6 +349,7 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox8;
         private ToolStripButton toolStripSobre;
+        private Label label1;
     }
 }
 

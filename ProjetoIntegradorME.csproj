@@ -6,6 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Title>Minha Estante</Title>
+    <Company>Transforme-se</Company>
+    <Authors>Bianca Diniz, Gabriela Goncalves, Larissa Silva, Carlos Henrique, Igor de Carvalho.</Authors>
   </PropertyGroup>
 
   <ItemGroup>

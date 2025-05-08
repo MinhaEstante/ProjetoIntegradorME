@@ -59,7 +59,7 @@ namespace ProjetoIntegradorME
                 MessageBox.Show("A senha deve ter no mínimo 6 caracteres!");
                 txtSenha.Focus();
             }
-            else if (txtUsuario.Text.Trim() == "" || txtEmail.Text.Trim() == "" || !txtEmail.Text.Contains("@"))
+            else if (txtUsuario.Text.Trim() == "" || txtEmail.Text.Trim() == "" || !txtEmail.Text.EndsWith("@gmail.com") || !txtEmail.Text.EndsWith("@hotmail.com"))
             {
                 MessageBox.Show("Usuario ou Email inválidos!");
                 txtUsuario.Focus();
