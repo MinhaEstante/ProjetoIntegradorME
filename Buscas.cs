@@ -40,20 +40,20 @@ namespace ProjetoIntegradorME
 
         private void Buscas_Load(object sender, EventArgs e)
         {
-            txtInfoBox.Text = "Please enter a book address or search for a book.";
+            txtInfoBox.Text = "Insira um link de livro ou pesquise.";
             txtBuscas.Text = "";
             rbtnBuscar.Checked = true;
 
 
             // Add search items and select default
-            string[] searchItems = new string[] { "all", "title", "author" };
+            string[] searchItems = new string[] { "Tudo", "Título", "Autor" };
             cbxProcura.Items.AddRange(searchItems);
-            cbxProcura.SelectedItem = "all";
+            cbxProcura.SelectedItem = "Tudo";
 
             // Add results and select all items
-            string[] resultItems = new string[] { "Title", "Blurb", "Published Date", "Page Count", "Authors", "Description" };
+            string[] resultItems = new string[] { "Título", "Sinopse", "Data de publicação", "Quantidade Página", "Autores", "Descrição" };
             resultsListBox.Items.AddRange(resultItems);
-            for (int i = 0; i < resultsListBox.Items.Count - 1; i++)
+            for (int i = 0; i < resultsListBox.Items.Count; i++)
             {
                 resultsListBox.SetItemChecked(i, true);
             }
@@ -123,7 +123,7 @@ namespace ProjetoIntegradorME
 
                 string text = "Number of records: " + bookJson["totalItems"].ToString() + "\r\n \r\n";
 
-                
+
 
                 JArray books = (JArray)bookJson["items"];
 
@@ -134,10 +134,20 @@ namespace ProjetoIntegradorME
                     foreach (var book in books)
                     {
                         sb.Append(ParseBook((JObject)book) + "\r\n \r\n");
+
+                        //avaliações / listbox - teste
+                        //
+                        lstAvaliac.Items.Add(book["id"].ToString() + " - " + book["volumeInfo"].ToString());
+
+                        
                     }
                     txtBuscas.Text += sb.ToString();
                     //infoBox.Text = "Success: " + (int)response.StatusCode + " " + response.ReasonPhrase; // Infobox success code
                     txtInfoBox.Text = bookURL + urlParameters;
+
+
+
+
                 }
                 else
                 {
@@ -229,6 +239,16 @@ namespace ProjetoIntegradorME
 
 
             return sb.ToString();
+        }
+
+        private void resultsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscas_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         // Search box disabled when absolute value active

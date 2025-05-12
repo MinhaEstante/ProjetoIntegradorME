@@ -38,6 +38,7 @@
             label1 = new Label();
             lblUsuario = new Label();
             lblEmail = new Label();
+            btnFoto = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picboxFotoUsuario).BeginInit();
             SuspendLayout();
@@ -143,12 +144,23 @@
             lblEmail.Text = "Email";
             lblEmail.TextAlign = ContentAlignment.BottomCenter;
             // 
+            // btnFoto
+            // 
+            btnFoto.Location = new Point(12, 65);
+            btnFoto.Name = "btnFoto";
+            btnFoto.Size = new Size(75, 23);
+            btnFoto.TabIndex = 14;
+            btnFoto.Text = "Alterar foto";
+            btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += btnFoto_Click;
+            // 
             // frmUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
             ClientSize = new Size(306, 353);
+            Controls.Add(btnFoto);
             Controls.Add(lblEmail);
             Controls.Add(lblUsuario);
             Controls.Add(label1);
@@ -181,5 +193,6 @@
         private Label label1;
         private Label lblUsuario;
         private Label lblEmail;
+        private Button btnFoto;
     }
 }

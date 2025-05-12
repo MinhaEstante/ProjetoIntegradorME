@@ -22,14 +22,14 @@ namespace ProjetoIntegradorME
         private void btnAlterar_Click(object sender, EventArgs e)
         {
 
-            //if (txtNovoNome.Text.Trim() == "" || txtNovoEmail.Text.Trim() == "" || txtNovaSenha.Text.Trim().Length < 6)
-            //{
-            //    MessageBox.Show("Dados incorretos!");
-            //    txtNovoNome.Focus();
-            //}
-            //else
+        //    if (txtNovoNome.Text.Trim() == "" || txtNovoEmail.Text.Trim() == "" || txtNovaSenha.Text.Trim().Length < 6)
+        //    {
+        //        MessageBox.Show("Dados incorretos!");
+        //        txtNovoNome.Focus();
+        //    }
+        //    else
 
-            //    alterarUsuario();
+        //        alterarUsuario();
         }
 
 
@@ -44,7 +44,7 @@ namespace ProjetoIntegradorME
         //        string nome = txtNovoNome.Text.Trim();
         //        string email = txtNovoEmail.Text.Trim();
         //        string senha = txtNovaSenha.Text.Trim();
-        //        int idUsuarios = txtID.Text;
+        //        int idUsuarios = txtID.Text.Trim();
 
         //        Banco.Conectar();
 
@@ -113,22 +113,5 @@ namespace ProjetoIntegradorME
             dadosUs(Global.usuario);
         }
 
-        //private void dgvID_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int id = Convert.ToInt32(dgvID.CurrentRow.Cells[0].Value);
-
-        //    //int id = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value);
-        //    //string nome, senha;
-
-        //    //nome = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
-        //    //senha = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
-
-        //    //txtUsuario.Text = nome;
-        //    //txtSenha.Text = senha;
-
-        //    //btnCadastrar.Enabled = false;
-        //    //btnAlterar.Enabled = true;
-        //    //btnDeletar.Enabled = true;
-        //}
     }
 }

@@ -41,7 +41,7 @@ namespace ProjetoIntegradorME
                 MySqlCommand cmd = new MySqlCommand(selecionarUsuarios, Banco.conexao);
                 cmd.Parameters.AddWithValue("@usuario", xUser);
 
-                MySqlDataReader dr =  cmd.ExecuteReader();
+                MySqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
@@ -65,7 +65,7 @@ namespace ProjetoIntegradorME
 
 
 
-     
+
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -78,8 +78,9 @@ namespace ProjetoIntegradorME
             dadosUsuario(Global.usuario);
         }
 
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
