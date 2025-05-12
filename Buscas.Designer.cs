@@ -94,6 +94,7 @@
             lblBusca.Size = new Size(39, 15);
             lblBusca.TabIndex = 33;
             lblBusca.Text = "Busca";
+            lblBusca.Visible = false;
             // 
             // resultsListBox
             // 
