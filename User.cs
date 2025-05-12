@@ -14,7 +14,7 @@ namespace ProjetoIntegradorME
             public static string usuario { get; set; }
             public static string email { get; set; }
 
-
+            public static string senha { get; set; }
 
 
         }

@@ -12,7 +12,7 @@ namespace ProjetoIntegradorME
         public static string db = "Server=u5a2o.h.filess.io;Port=3307;Database=minhaestante_towardalso;Uid=minhaestante_towardalso;Pwd=SenhaMinhaEstante;";
         public static MySqlConnection conexao; // Alterado para public para corrigir o erro CS0122  
 
-        public static async Task Conectar()
+        public static void Conectar()
         {
             try
             {

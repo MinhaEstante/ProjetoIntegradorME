@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProjetoIntegradorME.User;
 
 namespace ProjetoIntegradorME
 {
@@ -17,24 +19,19 @@ namespace ProjetoIntegradorME
             InitializeComponent();
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            //deletarUsuario();
-        }
-
         private void btnAlterar_Click(object sender, EventArgs e)
         {
 
-            //if (txtUsuario.Text.Trim() == "" || txtSenha.Text.Trim().Length < 6)
+            //if (txtNovoNome.Text.Trim() == "" || txtNovoEmail.Text.Trim() == "" || txtNovaSenha.Text.Trim().Length < 6)
             //{
-            //    MessageBox.Show("Usuario ou Senha incorretos!");
-            //    txtUsuario.Focus();
+            //    MessageBox.Show("Dados incorretos!");
+            //    txtNovoNome.Focus();
             //}
             //else
-            //{
+
             //    alterarUsuario();
-            //}
         }
+
 
 
 
@@ -44,29 +41,30 @@ namespace ProjetoIntegradorME
 
         //    try
         //    {
-        //        string usuario = txtUsuario.Text.Trim();
-        //        string senha = txtSenha.Text.Trim();
-        //        int id = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value);
+        //        string nome = txtNovoNome.Text.Trim();
+        //        string email = txtNovoEmail.Text.Trim();
+        //        string senha = txtNovaSenha.Text.Trim();
+        //        int idUsuarios = txtID.Text;
 
         //        Banco.Conectar();
 
-        //        string atualizar = "UPDATE t_usuario SET login = @login, senha = @senha WHERE id = @id;";
+        //        string atualizar = "UPDATE Usuarios SET Nome = @nome, Email = @email, Senha = @senha WHERE idUsuarios = @id;";
         //        MySqlCommand cm = new MySqlCommand(atualizar, Banco.conexao);
-        //        cm.Parameters.AddWithValue("@login", usuario);
+        //        cm.Parameters.AddWithValue("@nome", nome);
+        //        cm.Parameters.AddWithValue("@email", email);
         //        cm.Parameters.AddWithValue("@senha", senha);
-        //        cm.Parameters.AddWithValue("@id", id);
+        //        cm.Parameters.AddWithValue("@id", idUsuarios);
         //        cm.ExecuteNonQuery();
 
-        //        MessageBox.Show("Cadastro alterado com sucesso!");
+        //        MessageBox.Show("Usuário alterado com sucesso!");
 
-        //        txtUsuario.Clear();
-        //        txtSenha.Clear();
+        //        txtNovoNome.Clear();
+        //        txtNovoEmail.Clear();
+        //        txtNovaSenha.Clear();
 
         //        btnAlterar.Enabled = false;
-        //        btnDeletar.Enabled = false;
-        //        btnCadastrar.Enabled = true;
 
-               
+        //        Banco.Desconectar();
 
 
         //    }
@@ -78,36 +76,59 @@ namespace ProjetoIntegradorME
         //}
 
 
+        private void dadosUs(string usuario)
+        {
+            try
+            {
+
+                string xUser = usuario;
+
+                Banco.Conectar();
+                string selecionarUsuarios = "SELECT Nome, Email, Senha FROM Usuarios WHERE Nome = @usuario;";
+                MySqlCommand cmd = new MySqlCommand(selecionarUsuarios, Banco.conexao);
+                cmd.Parameters.AddWithValue("@usuario", xUser);
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    txtEmailAtual.Text = dr["Email"].ToString();
+                    txtNomeAtual.Text = dr["Nome"].ToString();
+                    txtSenhaAtual.Text = dr["Senha"].ToString();
+
+                }
 
 
+                Banco.Desconectar();
 
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.ToString());
+            }
+        }
 
-        //private void deletarUsuario()
+        private void frmAlterarUsuario_Load(object sender, EventArgs e)
+        {
+            dadosUs(Global.usuario);
+        }
+
+        //private void dgvID_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{
-        //    try
-        //    {
-        //        int id = Convert.ToInt32(   dgvUsuarios   .CurrentRow.Cells[0].Value);
-        //        DialogResult confirma = MessageBox.Show("Deseja deletar seu usuário?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-        //        if (confirma == DialogResult.Yes)
-        //        {
-        //            Banco.Conectar();
-        //            string del = "DELETE FROM Usuarios WHERE id = @idUsuarios;";
-        //            MySqlCommand cm = new MySqlCommand(del, Banco.conexao);
-        //            cm.Parameters.AddWithValue("@idUsuarios", id);
-        //            cm.ExecuteNonQuery();
+        //    int id = Convert.ToInt32(dgvID.CurrentRow.Cells[0].Value);
 
-        //            MessageBox.Show("Usuário excluído!");
+        //    //int id = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value);
+        //    //string nome, senha;
 
-        //            (vai fechar tudo)
-        //            
-        //            Banco.Desconectar();
-        //        }
+        //    //nome = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+        //    //senha = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
 
-        //    }
-        //    catch (Exception erro)
-        //    {
-        //        MessageBox.Show(erro.ToString());
-        //    }
+        //    //txtUsuario.Text = nome;
+        //    //txtSenha.Text = senha;
+
+        //    //btnCadastrar.Enabled = false;
+        //    //btnAlterar.Enabled = true;
+        //    //btnDeletar.Enabled = true;
         //}
     }
 }

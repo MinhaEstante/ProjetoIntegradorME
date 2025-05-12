@@ -42,6 +42,8 @@
             statusStrip = new StatusStrip();
             toolTip = new ToolTip(components);
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            buscas1 = new Buscas();
             pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -51,12 +53,10 @@
             lblLendo = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            btnBuscar = new Button();
-            txtBuscar = new TextBox();
             label1 = new Label();
             toolStrip.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -64,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // toolStrip
@@ -75,7 +74,7 @@
             toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2, toolStripUsuario, toolStripLendo, toolStripLidos, toolStripProxLeituras, toolStripSair, toolStripSobre });
             toolStrip.Location = new Point(0, 0);
             toolStrip.Name = "toolStrip";
-            toolStrip.Size = new Size(64, 523);
+            toolStrip.Size = new Size(64, 670);
             toolStrip.TabIndex = 1;
             toolStrip.Text = "ToolStrip";
             // 
@@ -153,16 +152,19 @@
             // 
             // statusStrip
             // 
-            statusStrip.Location = new Point(64, 501);
+            statusStrip.BackColor = Color.Transparent;
+            statusStrip.Location = new Point(64, 648);
             statusStrip.Name = "statusStrip";
             statusStrip.Padding = new Padding(1, 0, 16, 0);
-            statusStrip.Size = new Size(673, 22);
+            statusStrip.Size = new Size(1187, 22);
             statusStrip.TabIndex = 2;
             statusStrip.Text = "StatusStrip";
             // 
             // panel1
             // 
             panel1.BackColor = Color.AntiqueWhite;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(buscas1);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(pictureBox6);
@@ -172,25 +174,41 @@
             panel1.Controls.Add(lblLendo);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btnBuscar);
-            panel1.Controls.Add(txtBuscar);
             panel1.Location = new Point(64, 26);
             panel1.Name = "panel1";
-            panel1.Size = new Size(673, 472);
+            panel1.Size = new Size(1187, 619);
             panel1.TabIndex = 4;
+            panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(549, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
+            // 
+            // buscas1
+            // 
+            buscas1.BackColor = Color.AntiqueWhite;
+            buscas1.Location = new Point(577, -14);
+            buscas1.Name = "buscas1";
+            buscas1.Size = new Size(610, 619);
+            buscas1.TabIndex = 22;
             // 
             // pictureBox8
             // 
-            pictureBox8.Location = new Point(483, 308);
+            pictureBox8.Location = new Point(39, 246);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(100, 126);
-            pictureBox8.TabIndex = 16;
+            pictureBox8.TabIndex = 21;
             pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
-            pictureBox7.Location = new Point(333, 308);
+            pictureBox7.Location = new Point(333, 423);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(100, 126);
             pictureBox7.TabIndex = 15;
@@ -198,7 +216,7 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Location = new Point(333, 113);
+            pictureBox6.Location = new Point(333, 107);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(100, 126);
             pictureBox6.TabIndex = 14;
@@ -208,7 +226,7 @@
             // 
             lblProxLeituras.AutoSize = true;
             lblProxLeituras.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lblProxLeituras.Location = new Point(39, 276);
+            lblProxLeituras.Location = new Point(39, 400);
             lblProxLeituras.Name = "lblProxLeituras";
             lblProxLeituras.Size = new Size(134, 20);
             lblProxLeituras.TabIndex = 13;
@@ -217,7 +235,7 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(189, 308);
+            pictureBox5.Location = new Point(189, 423);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(100, 126);
             pictureBox5.TabIndex = 12;
@@ -225,7 +243,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(39, 308);
+            pictureBox4.Location = new Point(39, 423);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(100, 126);
             pictureBox4.TabIndex = 11;
@@ -235,7 +253,7 @@
             // 
             lblLendo.AutoSize = true;
             lblLendo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            lblLendo.Location = new Point(39, 81);
+            lblLendo.Location = new Point(39, 84);
             lblLendo.Name = "lblLendo";
             lblLendo.Size = new Size(52, 20);
             lblLendo.TabIndex = 6;
@@ -244,7 +262,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(189, 113);
+            pictureBox3.Location = new Point(189, 107);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(100, 126);
             pictureBox3.TabIndex = 10;
@@ -252,44 +270,18 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(39, 113);
+            pictureBox2.Location = new Point(39, 107);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(100, 126);
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(286, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.Location = new Point(576, 4);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(75, 23);
-            btnBuscar.TabIndex = 7;
-            btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.Location = new Point(416, 4);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(154, 23);
-            txtBuscar.TabIndex = 6;
             // 
             // label1
             // 
             label1.BackColor = Color.FromArgb(100, 63, 49);
             label1.Location = new Point(64, 0);
             label1.Name = "label1";
-            label1.Size = new Size(683, 27);
+            label1.Size = new Size(1187, 27);
             label1.TabIndex = 6;
             // 
             // mdiMenu
@@ -297,7 +289,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 64, 0);
-            ClientSize = new Size(737, 523);
+            ClientSize = new Size(1251, 670);
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(statusStrip);
@@ -306,11 +298,13 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "mdiMenu";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "mdiMenu";
+            Text = "Menu";
+            Load += mdiMenu_Load;
             toolStrip.ResumeLayout(false);
             toolStrip.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -318,7 +312,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -337,9 +330,6 @@
         private ToolStripButton toolStripProxLeituras;
         private Panel panel1;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
-        private Button btnBuscar;
-        private TextBox txtBuscar;
         private Label lblLendo;
         private PictureBox pictureBox3;
         private Label lblProxLeituras;
@@ -347,9 +337,11 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
-        private PictureBox pictureBox8;
         private ToolStripButton toolStripSobre;
         private Label label1;
+        private PictureBox pictureBox8;
+        private Buscas buscas1;
+        private PictureBox pictureBox1;
     }
 }
 

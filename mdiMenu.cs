@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using static ProjetoIntegradorME.User;
+
+using static ProjetoIntegradorME.JsonBia;
+
 
 namespace ProjetoIntegradorME
 {
     public partial class mdiMenu : Form
     {
         private int childFormNumber = 0;
+
+
 
         public mdiMenu()
         {
@@ -109,12 +118,6 @@ namespace ProjetoIntegradorME
 
 
 
-
-
-
-
-
-
         private void toolStripSair_Click(object sender, EventArgs e)
         {
             //sair
@@ -165,5 +168,22 @@ namespace ProjetoIntegradorME
         {
 
         }
+
+        private void mdiMenu_Load(object sender, EventArgs e)
+        {
+            statusStrip.Items.Add("Usuário: " + Global.usuario);
+            statusStrip.Items.Add(" | ");
+            statusStrip.Items.Add("Data atual: " + DateTime.Now);
+
+            
+        }
+
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
+
 }

@@ -15,6 +15,8 @@
     <PackageReference Include="Google.Apis.Books.v1" Version="1.68.0.3331" />
     <PackageReference Include="MySql.Data" Version="9.3.0" />
     <PackageReference Include="MySqlConnector" Version="2.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
