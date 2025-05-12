@@ -131,9 +131,11 @@
             // 
             // txtBuscas
             // 
+            txtBuscas.Cursor = Cursors.IBeam;
             txtBuscas.Location = new Point(283, 115);
             txtBuscas.Multiline = true;
             txtBuscas.Name = "txtBuscas";
+            txtBuscas.ScrollBars = ScrollBars.Vertical;
             txtBuscas.Size = new Size(284, 464);
             txtBuscas.TabIndex = 29;
             // 
@@ -145,6 +147,7 @@
             btnBuscar.TabIndex = 28;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txtBuscar
             // 

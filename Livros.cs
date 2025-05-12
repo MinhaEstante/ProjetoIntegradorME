@@ -9,9 +9,6 @@ namespace ProjetoIntegradorME
     [Serializable]
     public class Livros
     {
-    
-        
-            internal string pageCount;
 
             public Livros()
             {
@@ -20,11 +17,9 @@ namespace ProjetoIntegradorME
             public string title { get; set; }
             public List<string> authors { get; set; }
             public string publishedDate { get; set; }
-            public string pagaCount { get; set; }
+            public string pageCount { get; set; }
             public string description { get; set; }
+            public string blurb { get; set; }
 
-
-
-        
     }
 }
