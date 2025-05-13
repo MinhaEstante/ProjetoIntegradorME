@@ -74,6 +74,7 @@ namespace ProjetoIntegradorME
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             txtBuscas.Text = "";
+            lstAvaliac.Items.Clear();
 
             string urlParameters;
             HttpResponseMessage response;
@@ -137,9 +138,9 @@ namespace ProjetoIntegradorME
 
                         //avaliações / listbox - teste
                         //
-                        lstAvaliac.Items.Add(book["id"].ToString() + " - " + book["volumeInfo"].ToString());
+                        lstAvaliac.Items.Add(book["id"].ToString() + " - " + book["volumeInfo"]["title"].ToString());
 
-                        
+
                     }
                     txtBuscas.Text += sb.ToString();
                     //infoBox.Text = "Success: " + (int)response.StatusCode + " " + response.ReasonPhrase; // Infobox success code

@@ -41,6 +41,7 @@
             lstAvaliac = new ListBox();
             btnAvaliar = new Button();
             cboAvaliar = new ComboBox();
+            lblResults = new Label();
             SuspendLayout();
             // 
             // cbxProcura
@@ -55,7 +56,7 @@
             // 
             // txtInfoBox
             // 
-            txtInfoBox.Location = new Point(36, 95);
+            txtInfoBox.Location = new Point(304, 28);
             txtInfoBox.Name = "txtInfoBox";
             txtInfoBox.Size = new Size(189, 23);
             txtInfoBox.TabIndex = 36;
@@ -110,7 +111,7 @@
             // lblBuscas
             // 
             lblBuscas.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblBuscas.Location = new Point(322, 97);
+            lblBuscas.Location = new Point(491, 100);
             lblBuscas.Name = "lblBuscas";
             lblBuscas.Size = new Size(181, 15);
             lblBuscas.TabIndex = 30;
@@ -120,16 +121,17 @@
             // txtBuscas
             // 
             txtBuscas.Cursor = Cursors.IBeam;
-            txtBuscas.Location = new Point(434, 118);
+            txtBuscas.Location = new Point(376, 118);
             txtBuscas.Multiline = true;
             txtBuscas.Name = "txtBuscas";
             txtBuscas.ScrollBars = ScrollBars.Vertical;
-            txtBuscas.Size = new Size(284, 424);
+            txtBuscas.Size = new Size(342, 424);
             txtBuscas.TabIndex = 29;
             txtBuscas.TextChanged += txtBuscas_TextChanged;
             // 
             // btnBuscar
             // 
+            btnBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnBuscar.Location = new Point(491, 57);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(76, 23);
@@ -151,12 +153,13 @@
             lstAvaliac.ItemHeight = 15;
             lstAvaliac.Location = new Point(37, 118);
             lstAvaliac.Name = "lstAvaliac";
-            lstAvaliac.Size = new Size(391, 424);
+            lstAvaliac.Size = new Size(333, 424);
             lstAvaliac.TabIndex = 38;
             // 
             // btnAvaliar
             // 
-            btnAvaliar.Location = new Point(163, 548);
+            btnAvaliar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnAvaliar.Location = new Point(163, 552);
             btnAvaliar.Name = "btnAvaliar";
             btnAvaliar.Size = new Size(76, 23);
             btnAvaliar.TabIndex = 39;
@@ -166,18 +169,30 @@
             // cboAvaliar
             // 
             cboAvaliar.BackColor = Color.White;
+            cboAvaliar.Font = new Font("Segoe UI", 11F);
             cboAvaliar.FormattingEnabled = true;
-            cboAvaliar.Items.AddRange(new object[] { "PÉSSIMO", "RUIM", "MEDIANO", "BOM", "ÓTIMO" });
+            cboAvaliar.Items.AddRange(new object[] { "★", "★★", "★★★", "★★★★", "★★★★★" });
             cboAvaliar.Location = new Point(36, 549);
             cboAvaliar.Name = "cboAvaliar";
-            cboAvaliar.Size = new Size(121, 23);
+            cboAvaliar.Size = new Size(121, 28);
             cboAvaliar.TabIndex = 40;
+            // 
+            // lblResults
+            // 
+            lblResults.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblResults.Location = new Point(108, 86);
+            lblResults.Name = "lblResults";
+            lblResults.Size = new Size(224, 29);
+            lblResults.TabIndex = 41;
+            lblResults.Text = "Resultados para avaliação";
+            lblResults.TextAlign = ContentAlignment.BottomCenter;
             // 
             // Buscas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
+            Controls.Add(lblResults);
             Controls.Add(cboAvaliar);
             Controls.Add(btnAvaliar);
             Controls.Add(lstAvaliac);
@@ -213,5 +228,6 @@
         private ListBox lstAvaliac;
         private Button btnAvaliar;
         private ComboBox cboAvaliar;
+        private Label lblResults;
     }
 }

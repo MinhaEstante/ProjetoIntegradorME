@@ -62,7 +62,7 @@
             // 
             // btnAlterar
             // 
-            btnAlterar.Font = new Font("Segoe UI", 9F);
+            btnAlterar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAlterar.Location = new Point(126, 587);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(75, 23);
@@ -235,9 +235,10 @@
             Controls.Add(btnAlterar);
             Controls.Add(pictureBox1);
             Font = new Font("Segoe UI", 9F);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAlterarUsuario";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmAlterarUsuario";
+            Text = "Alterar Usuario";
             Load += frmAlterarUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

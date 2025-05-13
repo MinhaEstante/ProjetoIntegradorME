@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             btnVoltar = new Button();
             pictureBox1 = new PictureBox();
             lblPerfil = new Label();
@@ -35,7 +36,6 @@
             btnAlterar = new Button();
             txtNomeUsuario = new TextBox();
             txtEmailUsuario = new TextBox();
-            label1 = new Label();
             lblUsuario = new Label();
             lblEmail = new Label();
             btnFoto = new Button();
@@ -45,6 +45,7 @@
             // 
             // btnVoltar
             // 
+            btnVoltar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnVoltar.Location = new Point(110, 324);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(75, 23);
@@ -77,6 +78,8 @@
             // 
             // picboxFotoUsuario
             // 
+            picboxFotoUsuario.BackgroundImage = (Image)resources.GetObject("picboxFotoUsuario.BackgroundImage");
+            picboxFotoUsuario.BackgroundImageLayout = ImageLayout.Zoom;
             picboxFotoUsuario.Location = new Point(100, 55);
             picboxFotoUsuario.Name = "picboxFotoUsuario";
             picboxFotoUsuario.Size = new Size(107, 107);
@@ -85,11 +88,12 @@
             // 
             // btnAlterar
             // 
+            btnAlterar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAlterar.Location = new Point(12, 32);
             btnAlterar.Name = "btnAlterar";
-            btnAlterar.Size = new Size(75, 23);
+            btnAlterar.Size = new Size(75, 41);
             btnAlterar.TabIndex = 5;
-            btnAlterar.Text = "Alterar";
+            btnAlterar.Text = "Alterar Perfil";
             btnAlterar.UseVisualStyleBackColor = true;
             btnAlterar.Click += btnAlterar_Click;
             // 
@@ -110,17 +114,6 @@
             txtEmailUsuario.Size = new Size(169, 23);
             txtEmailUsuario.TabIndex = 8;
             txtEmailUsuario.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(255, 128, 128);
-            label1.Location = new Point(213, 65);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 15);
-            label1.TabIndex = 9;
-            label1.Text = "foto do usuario";
-            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // lblUsuario
             // 
@@ -146,9 +139,10 @@
             // 
             // btnFoto
             // 
-            btnFoto.Location = new Point(12, 65);
+            btnFoto.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnFoto.Location = new Point(12, 79);
             btnFoto.Name = "btnFoto";
-            btnFoto.Size = new Size(75, 23);
+            btnFoto.Size = new Size(75, 41);
             btnFoto.TabIndex = 14;
             btnFoto.Text = "Alterar foto";
             btnFoto.UseVisualStyleBackColor = true;
@@ -163,7 +157,6 @@
             Controls.Add(btnFoto);
             Controls.Add(lblEmail);
             Controls.Add(lblUsuario);
-            Controls.Add(label1);
             Controls.Add(txtEmailUsuario);
             Controls.Add(txtNomeUsuario);
             Controls.Add(btnAlterar);
@@ -171,6 +164,7 @@
             Controls.Add(lblPerfil);
             Controls.Add(pictureBox1);
             Controls.Add(btnVoltar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Usuário";
@@ -190,7 +184,6 @@
         private Button btnAlterar;
         private TextBox txtNomeUsuario;
         private TextBox txtEmailUsuario;
-        private Label label1;
         private Label lblUsuario;
         private Label lblEmail;
         private Button btnFoto;

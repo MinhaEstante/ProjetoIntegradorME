@@ -74,7 +74,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Font = new Font("Segoe UI", 10F);
+            btnCadastrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnCadastrar.Location = new Point(126, 340);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(89, 29);
@@ -142,6 +142,7 @@
             Controls.Add(txtEmail);
             Controls.Add(txtUsuario);
             Controls.Add(pcbMiniEstante);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmCadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";

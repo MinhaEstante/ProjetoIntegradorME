@@ -52,9 +52,10 @@
             // 
             // btnCriarConta
             // 
-            btnCriarConta.Location = new Point(130, 310);
+            btnCriarConta.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnCriarConta.Location = new Point(116, 310);
             btnCriarConta.Name = "btnCriarConta";
-            btnCriarConta.Size = new Size(75, 23);
+            btnCriarConta.Size = new Size(105, 23);
             btnCriarConta.TabIndex = 2;
             btnCriarConta.Text = "Criar Conta";
             btnCriarConta.UseVisualStyleBackColor = true;
@@ -77,7 +78,6 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(100, 23);
             txtEmail.TabIndex = 4;
-            txtEmail.Text = "teste@gmail.com";
             // 
             // txtSenha
             // 
@@ -86,7 +86,6 @@
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(100, 23);
             txtSenha.TabIndex = 5;
-            txtSenha.Text = "123456";
             // 
             // lblEmail
             // 
@@ -112,6 +111,7 @@
             // 
             // btnEntrar
             // 
+            btnEntrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnEntrar.Location = new Point(225, 231);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(75, 23);
@@ -134,6 +134,7 @@
             Controls.Add(lblCriarConta);
             Controls.Add(btnCriarConta);
             Controls.Add(pcbMinhaEstante);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

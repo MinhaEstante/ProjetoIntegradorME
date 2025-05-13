@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProxLeituras));
             pictureBox1 = new PictureBox();
             btnVoltar = new Button();
             lblProxLtrs = new Label();
-            pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
             pictureBox9 = new PictureBox();
             btnAdicionarProxLtrs = new Button();
+            pictureBox2 = new PictureBox();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -63,6 +64,7 @@
             // 
             // btnVoltar
             // 
+            btnVoltar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnVoltar.Location = new Point(12, 549);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(75, 23);
@@ -81,14 +83,6 @@
             lblProxLtrs.TabIndex = 3;
             lblProxLtrs.Text = "PRÓXIMAS LEITURAS";
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(62, 112);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(117, 149);
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
             // pictureBox3
             // 
             pictureBox3.Location = new Point(62, 321);
@@ -96,14 +90,6 @@
             pictureBox3.Size = new Size(117, 149);
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Location = new Point(251, 112);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(117, 149);
-            pictureBox4.TabIndex = 6;
-            pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -147,6 +133,7 @@
             // 
             // btnAdicionarProxLtrs
             // 
+            btnAdicionarProxLtrs.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAdicionarProxLtrs.Location = new Point(340, 549);
             btnAdicionarProxLtrs.Name = "btnAdicionarProxLtrs";
             btnAdicionarProxLtrs.Size = new Size(164, 23);
@@ -154,36 +141,57 @@
             btnAdicionarProxLtrs.Text = "Adicionar Próximas Leituras";
             btnAdicionarProxLtrs.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(62, 103);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(140, 181);
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
+            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox4.Location = new Point(251, 103);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(140, 181);
+            pictureBox4.TabIndex = 14;
+            pictureBox4.TabStop = false;
+            // 
             // frmProxLeituras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AntiqueWhite;
             ClientSize = new Size(834, 584);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox2);
             Controls.Add(btnAdicionarProxLtrs);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
             Controls.Add(lblProxLtrs);
             Controls.Add(btnVoltar);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmProxLeituras";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Próximas Leituras";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,14 +201,14 @@
         private PictureBox pictureBox1;
         private Button btnVoltar;
         private Label lblProxLtrs;
-        private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
         private PictureBox pictureBox9;
         private Button btnAdicionarProxLtrs;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox4;
     }
 }
